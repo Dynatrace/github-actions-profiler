@@ -4,7 +4,7 @@ const config: CliOptions = {
   environmentUrl: "https://umsaywsjuo.dev.apps.dynatracelabs.com/",
   icon: "src/assets/app-icon.png",
   app: {
-    name: "github-actions-profiler",
+    name: "GitHub Action Profiler Samle",
     version: "0.0.73",
     description: "GitHub Action Profiler - A sample project",
     id: "my.github.actions.profiler",

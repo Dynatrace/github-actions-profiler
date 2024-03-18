@@ -1,7 +1,7 @@
 import type { CliOptions } from "dt-app";
 
 const config: CliOptions = {
-  environmentUrl: "https://umsaywsjuo.dev.apps.dynatracelabs.com/",
+  environmentUrl: "<enter your environment url here>",
   icon: "src/assets/app-icon.png",
   app: {
     name: "GitHub Actions Profiler Sample",

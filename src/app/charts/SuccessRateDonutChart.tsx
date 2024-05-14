@@ -1,5 +1,6 @@
 import React, { ReactElement } from 'react';
 import { DonutChart } from '@dynatrace/strato-components-preview';
+import { Spacings } from '@dynatrace/strato-design-tokens';
 import { useSuccessRateQuery } from './hooks/useSuccessRateQuery';
 import { CenteredLoadingIndicator } from '../util/components/CenteredLoadingIndicator';
 import { ChartContainer } from './ChartContainer';
@@ -17,7 +18,10 @@ export default function SuccessRateDonutChart({ workflow }: SuccessRateProps): R
       {isLoading ? (
         <CenteredLoadingIndicator />
       ) : (
-        <DonutChart data={{ slices: successRates?.rates || [] }} colorPalette={COLOR_PALETTE}>
+        <DonutChart
+          data={{ slices: successRates?.rates || [] }}
+          colorPalette={COLOR_PALETTE}
+          style={{ padding: Spacings.Size8, boxSizing: 'border-box' }}>
           <DonutChart.Legend position='bottom'></DonutChart.Legend>
         </DonutChart>
       )}

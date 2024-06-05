@@ -1,12 +1,11 @@
-import React, { ReactNode } from 'react';
+import { PropsWithChildren } from 'react';
 import { Heading, Surface } from '@dynatrace/strato-components-preview';
 
-interface ChartContainerProps {
-  children: ReactNode;
+type Props = PropsWithChildren<{
   heading: string;
-}
+}>;
 
-export const ChartContainer = ({ heading, children }: ChartContainerProps) => {
+export const ChartContainer = ({ heading, children }: Props) => {
   return (
     <Surface>
       <Heading level={5}>{heading}</Heading>

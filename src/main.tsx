@@ -1,11 +1,12 @@
 import { AppRoot } from '@dynatrace/strato-components-preview';
-import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import { App } from './app/App';
 
-ReactDOM.render(
+const container = document.getElementById('root');
+const root = createRoot(container!);
+
+root.render(
   <AppRoot>
     <App />
   </AppRoot>,
-  document.getElementById('root'),
 );

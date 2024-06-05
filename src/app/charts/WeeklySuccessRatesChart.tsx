@@ -1,13 +1,12 @@
-import React from 'react';
 import { useWeeklySuccessRateQuery } from './hooks/useWeeklySuccessRateQuery';
 import { ChartContainer } from './ChartContainer';
 import { ConclusionTimeseriesChart } from './ConclusionTimeseriesChart';
 
-interface WeeklySuccessRatesChartProps {
+type Props = {
   workflow: string;
-}
+};
 
-export const WeeklySuccessRatesChart = ({ workflow }: WeeklySuccessRatesChartProps) => {
+export const WeeklySuccessRatesChart = ({ workflow }: Props) => {
   const [weeklySuccessRates, isLoading] = useWeeklySuccessRateQuery(workflow);
 
   return (

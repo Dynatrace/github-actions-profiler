@@ -1,11 +1,11 @@
 import { EVENT_TYPE } from '../../util/constants';
 import { v4 as uuidv4 } from 'uuid';
 
-export interface SampleDataOptions {
+export type SampleDataOptions = {
   eventType?: string;
   maxRunsPerDay?: number;
   numberOfDays?: number;
-}
+};
 
 /**
  * This is the data about a github action run that we will store
@@ -14,25 +14,25 @@ export interface SampleDataOptions {
  * GitHub's API for GitHub Actions actually returns a lot more details for
  * each run. For this demo, we only store the data we need.
  */
-export interface WorkflowRun {
+type WorkflowRun = {
   id: string;
   name: string;
   conclusion: string;
   run_started_at: Date;
   updated_at: Date;
   repository: string;
-}
+};
 
 /**
  * This is the business event we will store in Grail.
  */
-export interface BizEvent {
+export type BizEvent = {
   specversion: string;
   id: string;
   type: string;
   source: string;
   data: WorkflowRun;
-}
+};
 
 /**
  * We want to simulate `numberOfDaysToIngest` days full of workflow data.

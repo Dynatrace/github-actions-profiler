@@ -1,4 +1,3 @@
-import React from 'react';
 import { Card } from '../util/components/Card';
 import { ExternalLink } from '@dynatrace/strato-components-preview';
 

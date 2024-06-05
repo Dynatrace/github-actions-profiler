@@ -1,21 +1,16 @@
-import React from 'react';
 import { LabeledLoadingIndicator } from '../util/components/LabeledLoadingIndicator';
 import { DataImportState } from './useCheckData';
 import { ImportSampleDataCard } from '../cards/ImportSampleDataCard';
 import { Button } from '@dynatrace/strato-components-preview';
 import { Card } from '../util/components/Card';
 
-interface InitialDataImportSelectorProps {
+type Props = {
   dataImportState: DataImportState;
   onImportButtonClick: () => void;
   onRefetch: () => void;
-}
+};
 
-export const InitialDataImportSelector = ({
-  dataImportState,
-  onImportButtonClick,
-  onRefetch,
-}: InitialDataImportSelectorProps) => {
+export const InitialDataImportSelector = ({ dataImportState, onImportButtonClick, onRefetch }: Props) => {
   switch (dataImportState) {
     case 'not_available':
       return <ImportSampleDataCard onIngest={onImportButtonClick} onRefetch={onRefetch} />;

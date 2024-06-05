@@ -1,6 +1,5 @@
 import { IntentPayload, sendIntent } from '@dynatrace-sdk/navigation';
 import { Button } from '@dynatrace/strato-components-preview/buttons';
-import React from 'react';
 import { sendNotificationOnFailedActionsScript } from './SendNotificationOnFailedActionsScript';
 
 /**

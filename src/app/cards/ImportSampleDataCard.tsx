@@ -1,13 +1,12 @@
-import React from 'react';
 import { Card } from '../util/components/Card';
 import { Button, Flex } from '@dynatrace/strato-components-preview';
 
-type ImportSampleDataCardProps = {
+type Props = {
   onIngest: () => void;
   onRefetch: () => void;
 };
 
-export const ImportSampleDataCard = ({ onIngest, onRefetch }: ImportSampleDataCardProps) => {
+export const ImportSampleDataCard = ({ onIngest, onRefetch }: Props) => {
   return (
     <Card
       title='Import Sample Data'

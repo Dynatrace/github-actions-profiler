@@ -1,13 +1,12 @@
-import React from 'react';
 import { useCycleTimeQuery } from './hooks/useCycleTimeQuery';
 import { ChartContainer } from './ChartContainer';
 import { ConclusionTimeseriesChart } from './ConclusionTimeseriesChart';
 
-interface WeeklyCycleTimesChartProps {
+type Props = {
   workflow: string;
-}
+};
 
-export const WeeklyCycleTimesChart = ({ workflow }: WeeklyCycleTimesChartProps) => {
+export const WeeklyCycleTimesChart = ({ workflow }: Props) => {
   const [weeklyCycleTimes, isLoading] = useCycleTimeQuery(workflow);
 
   return (

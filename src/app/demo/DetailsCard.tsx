@@ -1,8 +1,8 @@
 import { Container, Flex, Surface, Text } from '@dynatrace/strato-components-preview';
 import { ExternalLinkIcon } from '@dynatrace/strato-icons';
-import React, { ReactElement } from 'react';
+import { ReactElement } from 'react';
 
-interface DetailsCardProps {
+type Props = {
   /** Absolute or relative link for the Card */
   href: string;
   /** The src for the image to show. */
@@ -11,9 +11,9 @@ interface DetailsCardProps {
   title: string;
   /** The text shown on the Card. */
   text: string;
-}
+};
 
-export const DetailsCard = ({ href, icon, title, text }: DetailsCardProps) => {
+export const DetailsCard = ({ href, icon, title, text }: Props) => {
   return (
     <Surface as='a' target='_blank' href={href} rel='noopener noreferrer' padding={8}>
       <Flex flexDirection='row' alignItems='center' gap={12}>

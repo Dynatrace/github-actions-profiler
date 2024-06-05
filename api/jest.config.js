@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-/** @type {import('ts-jest/dist/types').InitialOptionsTsJest} */
+/** @type {import('ts-jest/dist/types').JestConfigWithTsJest} */
 module.exports = {
   preset: "ts-jest",
   testEnvironment: "@dynatrace/runtime-simulator/lib/test-environment",

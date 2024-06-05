@@ -1,9 +1,8 @@
 import { IntentPayload, sendIntent } from '@dynatrace-sdk/navigation';
 import { Button } from '@dynatrace/strato-components-preview/buttons';
-import React from 'react';
 import { CollectFromGithubRepositoryWorkflowScript } from './CollectFromGithubRepositoryWorkflowScript';
 import { ExpandableText } from '@dynatrace/strato-components-preview/content';
-import { Code, Paragraph, Section, Strong } from '@dynatrace/strato-components-preview/typography';
+import { Code, Paragraph, Strong } from '@dynatrace/strato-components-preview/typography';
 import { Flex } from '@dynatrace/strato-components-preview';
 
 /**
@@ -43,15 +42,15 @@ export default function CreateIngesterWorkflowButton() {
       <Paragraph>
         Set up a workflow that collects data from a github repository of your choice.
         <ExpandableText>
-          <Section>
+          <section>
             <Strong>Dynatrace Automations</Strong> lets you create workflows on the fly. Here we create a workflow that
             collects data from GitHub's REST API.
-          </Section>
-          <Section>
+          </section>
+          <section>
             To use this workflow, you need to press the button above, and then
             <Strong> enter your github credentials</Strong> into the&nbsp;
             <Code>collectGithubWorkflows</Code> task.
-          </Section>
+          </section>
         </ExpandableText>
       </Paragraph>
       <Button

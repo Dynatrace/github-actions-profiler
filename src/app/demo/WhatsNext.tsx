@@ -1,5 +1,4 @@
 import { Container, ExternalLink, Flex, Heading, Paragraph } from '@dynatrace/strato-components-preview';
-import React from 'react';
 
 export const WhatsNext = () => {
   return (

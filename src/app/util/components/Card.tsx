@@ -1,14 +1,14 @@
 import { Flex, Heading, Surface, Text, Paragraph } from '@dynatrace/strato-components-preview';
-import React, { ReactNode } from 'react';
+import { ReactNode } from 'react';
 
-type CardProps = {
+type Props = {
   title: ReactNode;
   subtitle?: ReactNode;
   content: ReactNode;
   action: ReactNode;
 };
 
-export const Card = (props: CardProps) => {
+export const Card = (props: Props) => {
   const { title, subtitle, content, action } = props;
 
   return (

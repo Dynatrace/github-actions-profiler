@@ -37,15 +37,15 @@ fetch bizevents, from:now()-${DQL_QUERY_TIMESTAMP_OFFSET}
 `;
 }
 
-export interface WorkflowMetric {
+type WorkflowMetric = {
   metric: string;
   values: string[];
-}
+};
 
-export interface WorkflowMetrics {
+type WorkflowMetrics = {
   valueHeadings: string[];
   metrics: WorkflowMetric[];
-}
+};
 
 function formatTimestamp(value?: Date) {
   if (value === undefined) {

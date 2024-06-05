@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Flex, FormField, Grid, SelectV2 } from '@dynatrace/strato-components-preview';
+import { useState } from 'react';
+import { Flex, FormField, Grid, Label, SelectV2 } from '@dynatrace/strato-components-preview';
 import { WorkflowMetricsTable } from './WorkflowMetricsTable';
 import SuccessRateDonutChart from './SuccessRateDonutChart';
 import { WeeklyCycleTimesChart } from './WeeklyCycleTimesChart';
@@ -17,7 +17,8 @@ export const ChartsLayout = () => {
   return (
     <Flex flexDirection='column'>
       <Flex>
-        <FormField label='Select a workflow'>
+        <FormField>
+          <Label>Select a workflow</Label>
           <SelectV2 value={selectedWorkflow} onChange={setSelectedWorkflow}>
             <SelectV2.Content>
               {workflows.map((workflow) => (

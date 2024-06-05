@@ -1,14 +1,13 @@
 import { Button, Heading, Flex, Text } from '@dynatrace/strato-components-preview';
 import { ChatIcon, CodeIcon, XmarkIcon } from '@dynatrace/strato-icons';
-import React from 'react';
 import { DetailsCard } from './DetailsCard';
 import { GithubIcon } from './GithubIcon';
 
-interface SideBarContentProps {
+type Props = {
   onClose: () => void;
-}
+};
 
-export const SideBarContent = ({ onClose }: SideBarContentProps) => {
+export const SideBarContent = ({ onClose }: Props) => {
   return (
     <Flex flexDirection='column' paddingTop={32} gap={6}>
       <Flex flexDirection='row' justifyContent='space-between'>

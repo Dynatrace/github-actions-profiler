@@ -1,4 +1,3 @@
-import React from 'react';
 import { Card } from '../util/components/Card';
 import { CreateNotificationWorkflowButton } from '../workflows/CreateNotificationWorkflowButton';
 

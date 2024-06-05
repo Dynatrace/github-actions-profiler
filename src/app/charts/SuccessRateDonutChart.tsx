@@ -1,4 +1,4 @@
-import React, { ReactElement } from 'react';
+import { ReactElement } from 'react';
 import { DonutChart } from '@dynatrace/strato-components-preview';
 import { Spacings } from '@dynatrace/strato-design-tokens';
 import { useSuccessRateQuery } from './hooks/useSuccessRateQuery';
@@ -6,11 +6,11 @@ import { CenteredLoadingIndicator } from '../util/components/CenteredLoadingIndi
 import { ChartContainer } from './ChartContainer';
 import { COLOR_PALETTE } from './ChartColorPalette';
 
-interface SuccessRateProps {
+type Props = {
   workflow: string;
-}
+};
 
-export default function SuccessRateDonutChart({ workflow }: SuccessRateProps): ReactElement | null {
+export default function SuccessRateDonutChart({ workflow }: Props): ReactElement | null {
   const [successRates, isLoading] = useSuccessRateQuery(workflow);
 
   return (
@@ -21,7 +21,8 @@ export default function SuccessRateDonutChart({ workflow }: SuccessRateProps): R
         <DonutChart
           data={{ slices: successRates?.rates || [] }}
           colorPalette={COLOR_PALETTE}
-          style={{ padding: Spacings.Size8, boxSizing: 'border-box' }}>
+          style={{ padding: Spacings.Size8, boxSizing: 'border-box' }}
+        >
           <DonutChart.Legend position='bottom'></DonutChart.Legend>
         </DonutChart>
       )}

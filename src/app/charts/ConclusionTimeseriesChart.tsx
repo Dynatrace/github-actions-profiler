@@ -32,6 +32,6 @@ export const ConclusionTimeseriesChart = ({ timeseries, variant, loading }: Prop
       {cancelledTimeseries && <TimeseriesChartComponent data={cancelledTimeseries} color={COLOR_CANCELLED} />}
     </TimeseriesChart>
   ) : (
-    <Text textStyle='base'>No data available</Text>
+    <Text>No data available</Text>
   );
 };

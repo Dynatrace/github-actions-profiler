@@ -1,4 +1,4 @@
-import { AppRoot } from '@dynatrace/strato-components-preview';
+import { AppRoot } from '@dynatrace/strato-components/core';
 import { createRoot } from 'react-dom/client';
 import { App } from './app/App';
 

@@ -19,7 +19,7 @@ export const LabeledLoadingIndicator = ({ message, ...rest }: Props) => {
         /*TODO: Add a meaningful aria-label for the ProgressCircle element.*/
         aria-label='Description of the ProgressCircle.'
       />
-      <Text textStyle='base'>{message}</Text>
+      <Text>{message}</Text>
     </Flex>
   );
 };

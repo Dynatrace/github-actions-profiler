@@ -1,6 +1,6 @@
 {
   "name": "github-actions-profiler-sample",
-  "version": "1.6.0",
+  "version": "1.7.0",
   "description": "A sample app to inspire customers and show what is possible developing for the 3rd generation platform.",
   "engines": {
     "node": "^20.0.0"
